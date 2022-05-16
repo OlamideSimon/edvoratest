@@ -21,7 +21,7 @@ function pastRides() {
 
   return (
     <div className="body grid gap-5">
-      {rider.map(({ id, origin_station_code, station_path, date, city, map_url, state }, index) => {
+      {display.map(({ id, origin_station_code, station_path, date, city, map_url, state }, index) => {
         if (new Date().getTime() > new Date(date).getTime()) {
           return (
             <Cards
