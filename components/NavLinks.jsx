@@ -21,12 +21,10 @@ function NavLinks() {
   const onStateChange = (e) => {
     const selectedState = e.target.value
     if(selectedState !== 'all states') {
-        try{
            const result = rider.filter(({state}) => {
                return state == selectedState
                dispatch(selectState(result))
            })
-        } catch(e) {}
     } else {
       dispatch(resetState())
     }
@@ -35,11 +33,9 @@ function NavLinks() {
   const onCityChange = (e) => {
     const selectedCity = e.target.value
     if(selectedCity !== 'all cities') {
-      try {
           const result = rider.filter(({city}) => {
             return city == selectedCity
           })
-       } catch(e) {}
       dispatch(selectCity(result))
     } else {
       dispatch(resetCity())
