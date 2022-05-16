@@ -17,7 +17,7 @@ export default function Home({user, rides}) {
   }, [dispatch, rides, user])
 
   return (
-    <div className='bg-gray-900 min-h-screen'>
+    <div className='bg-gray-900 min-h-screen w-screen'>
       <Header />
       <NavLinks />
     </div>
